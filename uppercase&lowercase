@@ -1,0 +1,8 @@
+class Main {
+public static void main(String[] args){
+char var='A';
+if(var>='a'&& var<='z'){
+System.out.println("Lowercase");}
+else{ System.out.println("Uppercase");}
+}
+}
