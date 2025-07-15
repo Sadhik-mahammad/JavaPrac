@@ -1,0 +1,40 @@
+//create class called Calculator
+import java.util.*;
+class Calculator
+{
+public static int powerInt(int num1, int num2)//creating static method of powerint
+{
+return (int)Math.pow(num1,num2);//use Math.pow for calculating power
+}
+public static double powerDouble(double num1, double num2)//creating static methodpowerdouble
+{
+return Math.pow(num1,num2);
+}
+
+
+}
+public class Calculator2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input for integer power
+        System.out.print("Enter integer num1: ");
+        int intNum1 = sc.nextInt();
+
+        System.out.print("Enter integer num2: ");
+        int intNum2 = sc.nextInt();
+
+        int result1 = Calculator.powerInt(intNum1, intNum2);
+        System.out.println(intNum1 + "^" + intNum2 + " = " + result1);
+
+        // Input for double power
+        System.out.print("Enter double num1: ");
+        double doubleNum1 = sc.nextDouble();
+
+        System.out.print("Enter double num2: ");
+        int doubleNum2 = sc.nextInt();
+
+        double result2 = Calculator.powerDouble(doubleNum1, doubleNum2);
+        System.out.println(doubleNum1 + "^" + doubleNum2 + " = " + result2);
+    }
+}
