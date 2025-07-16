@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+//parent class
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating.");
+    }
+
+    void sleep() {
+        System.out.println("Animal is sleeping.");
+    }
+}
+
+//child class
+class Bird extends Animal {
+    @Override
+    void eat() {
+        System.out.println("Bird is pecking seeds.");
+    }
+
+    @Override
+    void sleep() {
+        System.out.println("Bird is sleeping in the nest.");
+    }
+
+    void fly() {
+        System.out.println("Bird is flying.");
+    }
+}
+
+public class TestInheritance {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Choose which object to create (1: Animal, 2: Bird):");
+        int choice = sc.nextInt();
+
+        if (choice == 1) {
+            Animal a = new Animal();
+            a.eat();
+            a.sleep();
+        } else if (choice == 2) {
+            Bird b = new Bird();
+            b.eat();
+            b.sleep();
+            b.fly();
+        } else {
+            System.out.println("Invalid choice.");
+        }
+
+        sc.close();
+    }
+}
