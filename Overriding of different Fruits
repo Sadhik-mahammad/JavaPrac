@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+// Base class
+class Fruit {
+    String name;
+    String taste;
+    String size;
+
+    Fruit(String name, String taste, String size) {
+        this.name = name;
+        this.taste = taste;
+        this.size = size;
+    }
+
+    void eat() {
+        System.out.println("Eating " + name + ", it tastes " + taste);
+    }
+}
+
+// Subclass Apple
+class Apple extends Fruit {
+    Apple(String name, String taste, String size) {
+        super(name, taste, size);
+    }
+
+    @Override
+    void eat() {
+        System.out.println("Eating Apple: " + taste + " and size is " + size);
+    }
+}
+
+// Subclass Orange
+class Orange extends Fruit {
+    Orange(String name, String taste, String size) {
+        super(name, taste, size);
+    }
+
+    @Override
+    void eat() {
+        System.out.println("Eating Orange: " + taste + " and size is " + size);
+    }
+}
+
+public class TestFruit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter Apple taste and size:");
+        String appleTaste = sc.nextLine();
+        String appleSize = sc.nextLine();
+
+        System.out.println("Enter Orange taste and size:");
+        String orangeTaste = sc.nextLine();
+        String orangeSize = sc.nextLine();
+
+        Apple a = new Apple("Apple", appleTaste, appleSize);
+        Orange o = new Orange("Orange", orangeTaste, orangeSize);
+
+        a.eat();
+        o.eat();
+
+        sc.close();
+    }
+}
