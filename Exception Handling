@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Exceptiondemo{
+    public static void main(String[] args) {
+    	System.out.println("Execution Start:");
+    	Scanner sc=new Scanner(System.in);
+    	int i=sc.nextInt();
+    	int j=sc.nextInt();
+    	int result=0;
+    	
+    	
+    	try {
+    		result= i/j;
+    		}
+    	catch(ArithmeticException ae) {
+    		System.out.println(ae.toString());
+    	}
+    	
+    	System.out.println("Output is: "+result);
+    	System.out.println("Execution End: ");
+    }	
+}
