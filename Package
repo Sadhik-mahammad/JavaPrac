@@ -1,0 +1,22 @@
+package testpackage;
+
+public class Foundation {
+	private int var1=5;
+	int var2=10;
+	protected int var3=15;
+	public int var4=20;
+
+}
+//create demo class to see output
+package testpackage;
+
+
+
+public class Demo{
+	public static void main(String[] args) {
+		testpackage.Foundation demo=new testpackage.Foundation();
+		System.out.println(demo.var2);
+		System.out.println(demo.var3);
+	    System.out.println(demo.var4);	
+	}
+}
