@@ -1,0 +1,23 @@
+import java.util.*;
+public class Collect {
+	public static void main(String[] args) {
+		
+		
+		ArrayList<String> h1=new ArrayList<String>();
+		h1.add("January");
+		h1.add("february");
+		h1.add("march");
+		h1.add("april");
+		h1.add("may");
+		h1.add("june");
+		h1.add("july");
+		h1.add("august");
+		h1.add("september");
+		h1.add("october");
+		h1.add("november");
+		h1.add("december");
+		System.out.println(h1);
+				
+	}
+	
+}
